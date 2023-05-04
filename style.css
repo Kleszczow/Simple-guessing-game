@@ -20,3 +20,10 @@ input {
   height: 20px;
   margin-top: 10px;
 }
+
+#win {
+  display: none;
+}
+#lost {
+  display: none;
+}
