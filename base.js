@@ -31,6 +31,7 @@ const resoluts = () => {
 const winFunction = () => {
   lost.style.display = "none";
   win.style.display = "block";
+  win.style.color = "green";
 };
 const lostunction = () => {
   win.style.display = "none";

@@ -1,9 +1,18 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 body {
   height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Roboto", sans-serif;
+  background: url(./imagines/wave-haikei.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 main {
   display: flex;
@@ -14,6 +23,8 @@ main {
 input {
   width: 60%;
   justify-items: center;
+  padding: 10px 25px;
+  font-size: 20px;
 }
 #submitBtn {
   width: 30%;
@@ -21,9 +32,57 @@ input {
   margin-top: 10px;
 }
 
+.title {
+  font-weight: 900;
+  font-size: 55px;
+  animation: color 4s infinite;
+}
+.instruction {
+  color: #0066ff;
+  font-weight: 400;
+  font-size: 19px;
+  margin-top: 15px;
+}
+#numberShow {
+  color: aliceblue;
+  margin: 15px 0 15px 0;
+  font-size: 65px;
+}
+#submitBtn {
+  margin-bottom: 25px;
+  transition: all 0.375s;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  margin-top: 15px;
+}
+#submitBtn:hover {
+  background-color: red;
+  color: aliceblue;
+}
 #win {
   display: none;
+  color: aliceblue;
 }
 #lost {
   display: none;
+  color: aliceblue;
+}
+
+@keyframes color {
+  0% {
+    color: red;
+  }
+  25% {
+    color: rgb(79, 224, 79);
+  }
+  70% {
+    color: rgb(65, 65, 221);
+  }
+  85% {
+    color: violet;
+  }
+  100% {
+    color: red;
+  }
 }
