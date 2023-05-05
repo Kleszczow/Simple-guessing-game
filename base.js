@@ -3,6 +3,8 @@ const submitBtn = document.getElementById("submitBtn");
 const numberShow = document.getElementById("numberShow");
 const win = document.getElementById("win");
 const lost = document.getElementById("lost");
+const canvas = document.querySelector("#confetti");
+const jsConfetti = new JSConfetti();
 
 submitBtn.addEventListener("click", () => {
   checkValue();
@@ -10,7 +12,6 @@ submitBtn.addEventListener("click", () => {
 
 const checkValue = () => {
   if (inpValue.value >= 0 && inpValue.value <= 10 && inpValue.value !== "") {
-    numberShow.innerHTML = aiChocie();
     resoluts();
   } else {
     alert("Your guess is not on the scale pls try agin :/");
@@ -19,21 +20,27 @@ const checkValue = () => {
 };
 
 const aiChocie = (ai) => {
-  return Math.floor(Math.random() * 11);
+  return Math.floor(Math.random() * 10 + 1);
 };
 
 const resoluts = () => {
   let ai = aiChocie();
   let player = inpValue.value;
+  numberShow.innerHTML = ai;
   let resolut = ai == player ? winFunction() : lostunction();
 };
 
 const winFunction = () => {
-  lost.style.display = "none";
-  win.style.display = "block";
-  win.style.color = "green";
+  numberShow.style.color = "green";
+  confetti();
 };
+
 const lostunction = () => {
-  win.style.display = "none";
-  lost.style.display = "block";
+  numberShow.style.color = "red";
+};
+
+const confetti = () => {
+  jsConfetti.addConfetti({
+    emojis: ["🌈", "⚡️", "💥", "✨", "💫", "🌸"],
+  });
 };

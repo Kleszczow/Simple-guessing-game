@@ -21,15 +21,17 @@ main {
   justify-content: center;
 }
 input {
-  width: 60%;
+  width: 80%;
   justify-items: center;
   padding: 10px 25px;
   font-size: 20px;
-}
-#submitBtn {
-  width: 30%;
-  height: 20px;
-  margin-top: 10px;
+  text-align: center;
+
+  color: aliceblue;
+  background-color: #0066ff;
+
+  border: none;
+  border-radius: 5px;
 }
 
 .title {
@@ -54,19 +56,16 @@ input {
   border: none;
   border-radius: 5px;
   font-weight: 700;
-  margin-top: 15px;
+  margin-top: 25px;
+  padding: 15px 20px;
 }
 #submitBtn:hover {
   background-color: red;
   color: aliceblue;
 }
-#win {
-  display: none;
-  color: aliceblue;
-}
-#lost {
-  display: none;
-  color: aliceblue;
+#confetti {
+  position: absolute;
+  pointer-events: none;
 }
 
 @keyframes color {
